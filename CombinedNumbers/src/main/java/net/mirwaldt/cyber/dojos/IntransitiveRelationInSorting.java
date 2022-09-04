@@ -48,9 +48,9 @@ public class IntransitiveRelationInSorting {
         sortAndPrintOut(12345);
     }
 
-    private static void sortAndPrintOut(int SEED) {
+    private static void sortAndPrintOut(int seed) {
         List<Hand> hands = new ArrayList<>();
-        Random random = new Random(SEED);
+        Random random = new Random(seed);
         for (int i = 0; i < 12; i++) {
             hands.add(Hand.values()[random.nextInt(3)]);
         }
