@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * This example shows you what can happen in sorting if your relation is intransitive.
+ * This example shows you what can happen with sorting if your relation is intransitive.
  *
  * Output:
  * Before sorting: [PAPER, PAPER, PAPER, SCISSORS, PAPER, SCISSORS, ROCK, ROCK, SCISSORS, ROCK, ROCK, PAPER]
