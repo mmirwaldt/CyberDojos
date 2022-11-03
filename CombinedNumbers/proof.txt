@@ -1,6 +1,6 @@
 Important remark to avoid confusion:
 "A <= B" means "A is smaller or equal to B"
-"C => D" means "C implies D"
+"C => D" means "C implies D" (don't confuse it with ">=")
 
 Goal: We want to find out whether combining two positive numbers to the greatest number is transitive
 so that if we have a <= b <= cand if we combine a and b and we combine b and c,
