@@ -10,9 +10,9 @@ import java.util.Random;
  * Output:
  * Before sorting: [PAPER, PAPER, PAPER, SCISSORS, PAPER, SCISSORS, ROCK, ROCK, SCISSORS, ROCK, ROCK, PAPER]
  * After sorting: [ROCK, ROCK, ROCK, ROCK, PAPER, PAPER, PAPER, PAPER, PAPER, SCISSORS, SCISSORS, SCISSORS]
- * --------------------------------------------------------------------------------------------------------------
- * Before sorting: [ROCK, ROCK, SCISSORS, SCISSORS, ROCK, ROCK, ROCK, SCISSORS, ROCK, SCISSORS, PAPER, SCISSORS]
- * After sorting: [SCISSORS, SCISSORS, SCISSORS, SCISSORS, SCISSORS, ROCK, ROCK, ROCK, ROCK, ROCK, ROCK, PAPER]
+ --------------------------------------------------------------------------------------------------------------
+ * Before sorting: [ROCK, ROCK, SCISSORS, SCISSORS, ROCK, SCISSORS, PAPER, ROCK, PAPER, SCISSORS, ROCK, SCISSORS]
+ * After sorting: [SCISSORS, SCISSORS, SCISSORS, SCISSORS, SCISSORS, ROCK, ROCK, ROCK, ROCK, ROCK, PAPER, PAPER]
  *
  * The sort order is different, although it must be the same!
  * That's the effect of an intransitive relation.
@@ -45,7 +45,7 @@ public class IntransitiveRelationInSorting {
     public static void main(String[] args) {
         sortAndPrintOut(1234);
         System.out.println("-".repeat(110));
-        sortAndPrintOut(12345);
+        sortAndPrintOut(1239); // we use a different seed
     }
 
     private static void sortAndPrintOut(int seed) {
