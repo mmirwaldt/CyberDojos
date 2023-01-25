@@ -2,7 +2,7 @@ package net.mirwaldt.cyber.dojos;
 
 import java.util.*;
 
-import static net.mirwaldt.cyber.dojos.IntransitiveRelationInTreeSet.Hand.ROCK;
+import static net.mirwaldt.cyber.dojos.IntransitiveRelationInSortedSet.Hand.ROCK;
 
 /**
  * Output:
@@ -12,7 +12,7 @@ import static net.mirwaldt.cyber.dojos.IntransitiveRelationInTreeSet.Hand.ROCK;
  * Once again, an intransitive comparator causes different sort orders.
  */
 @SuppressWarnings("DuplicatedCode")
-public class IntransitiveRelationInTreeSet {
+public class IntransitiveRelationInSortedSet {
     enum Hand {
         SCISSORS() {
             @Override
@@ -37,7 +37,7 @@ public class IntransitiveRelationInTreeSet {
     }
 
     public static void main(String[] args) {
-        SortedSet<Hand> sortedSet = new TreeSet<>(IntransitiveRelationInTreeSet::compareTo);
+        SortedSet<Hand> sortedSet = new TreeSet<>(IntransitiveRelationInSortedSet::compareTo);
 
         sortedSet.add(Hand.SCISSORS);
         sortedSet.add(ROCK);
