@@ -31,7 +31,7 @@ import java.util.Random;
  * E.g. let's assume the equals() method is intransitive but symmetric (a.equals(b) implies b.equals(a)).
  * What does that mean?
  * If a.equals(b) and b.equals(c), then a.equals(c) or even !a.equals(c) !
- * However, if !a.equals(c) and a.equals(b), then !b.equals(c) but didn't we assumed b.equals(c) before?! Ouch!
+ * However, if !a.equals(c) and a.equals(b), then !b.equals(c) but haven't we assumed b.equals(c) before?! Ouch!
  */
 public class IntransitiveRelationInSorting {
     enum Hand {
