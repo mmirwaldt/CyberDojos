@@ -14,24 +14,24 @@ import java.util.Random;
  * Before sorting: [ROCK, ROCK, SCISSORS, SCISSORS, ROCK, SCISSORS, PAPER, ROCK, PAPER, SCISSORS, ROCK, SCISSORS]
  * After sorting: [SCISSORS, SCISSORS, SCISSORS, SCISSORS, SCISSORS, ROCK, ROCK, ROCK, ROCK, ROCK, PAPER, PAPER]
  * <p/>
- * The sort order is different, although it must be the same!
+ * The sort orders are different, although they must be the same! What happened?!
  * That's the effect of an intransitive relation.
  * E.g. "SCISSORS wins against PAPER" and "PAPER wins against ROCK" => "SCISSORS wins against ROCK" (wrong!)
  * <p/>
- * Why do we get many sort orders instead of only one with intransitive relations?
+ * Why do we get many sort orders instead of only one with an intransitive relation?
  * E.g. let's assume the "<"-relation is intransitive.
  * What does that mean?
- * If a < b and b < c, then a < c or even c < a !
+ * If a < b and b < c, then a < c OR even c < a !
  * This, however, leads to three different sort orders: c < a < b and b < c < a and a < b < c.
  * It is somehow "cyclic" producing all these different sort orders.
- * However, it does not contradict itself so that you will never face an exception
- * If you now replace a by ROCK, b by PAPER and c by SCISSORS, then the output of the example makes sense.
+ * It does not contradict itself so that you will never face an IllegalArgumentException from e.g. Collections.sort(...).
+ * If you now replace "a" by ROCK, "b" by PAPER and "c" by SCISSORS, then the output of the outputs make sense.
  * <p/>
  * An intransitive relation can even lead to contradictions.
  * E.g. let's assume the equals() method is intransitive but symmetric (a.equals(b) implies b.equals(a)).
  * What does that mean?
- * If a.equals(b) and b.equals(c), then a.equals(c) or even !a.equals(c) !
- * However, if !a.equals(c) and a.equals(b), then !b.equals(c) but didn't we assumed b.equals(c) before?! Ouch!
+ * If a.equals(b) and b.equals(c), then a.equals(c) OR even !a.equals(c) !
+ * However, if !a.equals(c) and a.equals(b), then !b.equals(c) but didn't we assume b.equals(c) before?! Ouch!
  */
 public class IntransitiveRelationInSorting {
     enum Hand {
